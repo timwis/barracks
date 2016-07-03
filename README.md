@@ -34,7 +34,6 @@ store.model({
 const createSend = store.start({ noSubscriptions: true })
 const send = createSend('myDispatcher', true)
 document.addEventListener('DOMContentLoaded', () => {
-  store.start()
   const state = store.state()
   send('foo:start', { name: 'Loki' })
 })
